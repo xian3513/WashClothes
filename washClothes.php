@@ -1,3 +1,3 @@
 <?PHP
-    echo '狄君大sb';
+    echo 'di jun ------>  sb';
 ?>
