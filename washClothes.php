@@ -1,5 +1,3 @@
 <?PHP
-    echo 'hello world';
-    echo 'hello world';
-    
+    echo '狄君大sb';
 ?>
