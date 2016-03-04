@@ -7,13 +7,7 @@
 define("TOKEN", "123456");
 $wechatObj = new wechatCallbackapiTest();
 $wechatObj->valid();
-// if($_GET['echostr']){
 
-//     $wechatObj->valid();
-// }else{
-
-//     $wechatObj->responseMsg();
-// }
 
 if($_GET["echostr"){
     $wechatObj->valid();
@@ -29,7 +23,7 @@ class wechatCallbackapiTest
 
         //valid signature , option
         if($this->checkSignature()){
-            echo "fail";
+        
         	echo $echoStr;
         	exit;
         }else{
