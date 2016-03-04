@@ -9,7 +9,7 @@ $wechatObj = new wechatCallbackapiTest();
 $wechatObj->valid();
 
 
-if($_GET["echostr"){
+if($_GET["echostr"]){
     $wechatObj->valid();
 }else{
     $wechatObj->responseMsg();
