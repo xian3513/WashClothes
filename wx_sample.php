@@ -4,7 +4,7 @@
   */
 
 //define your token
-define("TOKEN", "weixin");
+define("TOKEN", "123456");
 $wechatObj = new wechatCallbackapiTest();
 $wechatObj->valid();
 if($_GET['echostr']){
