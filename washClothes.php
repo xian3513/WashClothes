@@ -7,7 +7,7 @@
 <?PHP
     echo 'di jun ------>  sb';
 
-    $conn = mysql_connect("http://xian.applinzi.com:3307","SAE_MYSQL_USER","SAE_MYSQL_PASS");
+    $conn = mysql_connect("xian.applinzi.com:3307","SAE_MYSQL_USER","SAE_MYSQL_PASS");
     if($conn){
     	echo "ok";
     }else {
