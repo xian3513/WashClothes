@@ -10,10 +10,10 @@ $wechatObj->valid();
 
 if (isset($_GET['echostr'])) {
     $wechatObj->valid();
-    echo "valid";
+    
 }else{
     $wechatObj->responseMsg();
-    echo "responseMsg";
+   
 }
 
 class wechatCallbackapiTest
@@ -63,7 +63,7 @@ class wechatCallbackapiTest
 				if(!empty( $keyword ))
                 {
               		$msgType = "text";
-                	$contentStr = "Hello world!";
+                	$contentStr = "Hello worldddddddd!";
                 	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                 	echo $resultStr;
                 }else{
@@ -71,7 +71,7 @@ class wechatCallbackapiTest
                 }
 
         }else {
-        	echo "zahuishi";
+        
         	exit;
         }
     }
