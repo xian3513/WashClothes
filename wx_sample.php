@@ -27,6 +27,7 @@ class wechatCallbackapiTest
         	echo $echoStr;
         	exit;
         }
+    }
 
     public function responseMsg()
     {
