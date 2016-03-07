@@ -41,6 +41,7 @@ class wechatCallbackapiTest
                 $fromUsername = $postObj->FromUserName;
                 $toUsername = $postObj->ToUserName;
                 $keyword = trim($postObj->Content);
+                $Event = $postObj->Event;
                 $time = time();
                 $textTpl = "<xml>
 							<ToUserName><![CDATA[%s]]></ToUserName>
@@ -49,7 +50,14 @@ class wechatCallbackapiTest
 							<MsgType><![CDATA[%s]]></MsgType>
 							<Content><![CDATA[%s]]></Content>
 							<FuncFlag>0</FuncFlag>
-							</xml>";             
+							</xml>";   
+
+                if($Event == "subscribe"){
+                    $msgType = "text";
+                    $contentStr = "hahhahahahahah!";
+                    $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                    echo $resultStr;
+                }          
 				if(!empty( $keyword ))
                 {
               		$msgType = "text";
