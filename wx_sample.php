@@ -10,8 +10,10 @@ $wechatObj->valid();
 
 if (isset($_GET['echostr'])) {
     $wechatObj->valid();
+    echo "valid";
 }else{
     $wechatObj->responseMsg();
+    echo "responseMsg";
 }
 
 class wechatCallbackapiTest
