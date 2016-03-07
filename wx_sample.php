@@ -71,7 +71,7 @@ class wechatCallbackapiTest
                 }
 
         }else {
-        	echo "咋回事";
+        	echo "zahuishi";
         	exit;
         }
     }
