@@ -14,7 +14,6 @@ if (isset($_GET['echostr'])) {
     $wechatObj->responseMsg();
 }
 
-
 class wechatCallbackapiTest
 {
 	public function valid()
@@ -23,7 +22,6 @@ class wechatCallbackapiTest
 
         //valid signature , option
         if($this->checkSignature()){
-        
         	echo $echoStr;
         	exit;
         }
@@ -55,7 +53,7 @@ class wechatCallbackapiTest
 				if(!empty( $keyword ))
                 {
               		$msgType = "text";
-                	$contentStr = "hello world!";
+                	$contentStr = "Hello world!";
                 	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                 	echo $resultStr;
                 }else{
