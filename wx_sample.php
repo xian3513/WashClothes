@@ -69,7 +69,7 @@ class wechatCallbackapiTest
                 }
 
         }else {
-        	echo "";
+        	echo "咋回事";
         	exit;
         }
     }
