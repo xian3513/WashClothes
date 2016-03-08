@@ -5,15 +5,12 @@
 
 //define your token
 define("TOKEN", "weixin");
+date_default_timezone_set('PRC'); 
 $wechatObj = new wechatCallbackapiTest();
-$wechatObj->valid();
-
 if (!isset($_GET['echostr'])) {
-    $wechatObj->valid();
-    
-}else{
     $wechatObj->responseMsg();
-   
+}else{
+    $wechatObj->valid();
 }
 
 class wechatCallbackapiTest
@@ -55,9 +52,23 @@ class wechatCallbackapiTest
 							</xml>";   
 
                 if($Event == "subscribe"){
-                    $msgType = "text";
-                    $contentStr = "hahhahahahahah!";
-                    $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                    $textTpl = "<xml>
+                            <ToUserName><![CDATA[%s]]></ToUserName>
+                            <FromUserName><![CDATA[%s]]></FromUserName>
+                            <CreateTime>%s</CreateTime>
+                            <MsgType><![CDATA[news]]></MsgType>
+                           <ArticleCount>1</ArticleCount>
+                            <Articles>
+                             <item>
+                                <Title><![CDATA[title1]]></Title> 
+                                <Description><![CDATA[description1]]></Description>
+                                <PicUrl><![CDATA[picurl]]></PicUrl>
+                                <Url><![CDATA[url]]></Url>
+                            </item>
+                            </Articles>
+                            </xml>";
+                  
+                    $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType);
                     echo $resultStr;
                 }          
 				if(!empty( $keyword ))
